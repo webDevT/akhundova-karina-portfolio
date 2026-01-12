@@ -1,0 +1,136 @@
+@use "../../../scss/variables" as *;
+
+.header {
+  width: 100%;
+  padding-top: 26px;
+  padding-bottom: 26px;
+  font-size: 16px;
+  position: relative;
+}
+
+.container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.headerMenu {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: calc(100% - 110px);
+}
+.headerMenuContactLink {
+  display: flex;
+  align-items: center;
+}
+
+.headerMenuContactLink:hover {
+  .headerMenuContactLinkIcon {
+    transform: translateX(2px) translateY(-2px);
+  }
+}
+.headerMenuContactLinkIcon {
+  width: 9px;
+  height: 9px;
+  object-fit: contain;
+  object-position: center;
+  margin-left: 4px;
+  display: block;
+  transition: all 0.5s ease;
+}
+.headerMenuLink { 
+  margin-right: 30px;
+  transition: all 0.5s ease;
+  position: relative;
+}
+.headerMenuLink {
+  position: relative;
+  padding-bottom: 4px;
+  padding-top: 4px;
+}
+.headerMenuLink::after {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  height: 1px;
+  background-color: $main-text;
+  transition: all 0.5s ease;
+}
+.headerMenuLink:hover::after {
+  width: 100%;
+  transition: all 0.5s ease;
+}
+.headerMenuContactLinkText {
+  border-bottom: 1px solid $main-text;
+}
+.headerMenuToggle {
+  display: none;
+}
+@media (max-width: 768px) {
+  .headerMenu {
+    display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    background-color: #fff;
+    padding: 20px;
+    padding-bottom: 35px;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+    z-index: 1000;
+    width: 100%;
+  }
+  .headerMenuOpen {
+    display: flex;
+  }
+  .headerMenuLinks {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    margin-bottom: 0px;
+  }
+  .headerMenuLink {
+    margin-right: 0;
+    margin-bottom: 15px;
+    width: 100%;
+  }
+  .headerMenuContact {
+    width: 100%;
+  }
+  .headerMenuToggle {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    cursor: pointer;
+    z-index: 1001;
+  }
+  .headerMenuToggleLine {
+    width: 30px;
+    height: 2px;
+    margin-bottom: 5px;
+    background-color: $main-text;
+    transition: all 0.3s ease;
+  }
+  .headerMenuToggleLine:last-child {
+    margin-bottom: 0;
+  }
+  .headerMenuToggleLine:nth-child(2) {
+    width: 20px;
+  }
+  .headerMenuToggleActive {
+    .headerMenuToggleLine:nth-child(1) {
+      transform: rotate(45deg) translate(4px, 7px);
+    }
+    .headerMenuToggleLine:nth-child(2) {
+      opacity: 0;
+      width: 0;
+    }
+    .headerMenuToggleLine:nth-child(3) {
+      transform: rotate(-45deg) translate(3px, -6px);
+    }
+  }
+}

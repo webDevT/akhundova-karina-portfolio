@@ -1,0 +1,31 @@
+{
+  "name": "akhundova-karina-portfolio",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "next dev",
+    "build": "next build",
+    "start": "next start",
+    "lint": "next lint"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/webDevT/akhundova-karina-portfolio.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/webDevT/akhundova-karina-portfolio/issues"
+  },
+  "homepage": "https://github.com/webDevT/akhundova-karina-portfolio#readme",
+  "dependencies": {
+    "next": "^16.0.3",
+    "react": "^19.2.0",
+    "react-dom": "^19.2.0"
+  },
+  "devDependencies": {
+    "sass": "^1.94.2"
+  }
+}
