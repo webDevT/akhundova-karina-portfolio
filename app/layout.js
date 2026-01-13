@@ -5,6 +5,11 @@ import localFont from 'next/font/local';
 const aeonik = localFont({
   src: [
     {
+      path: '../public/fonts/Aeonik Pro Light.woff2',
+      weight: '300',
+      style: 'normal',
+    },
+    {
       path: '../public/fonts/Aeonik Regular.woff2',
       weight: '400',
       style: 'normal',

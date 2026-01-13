@@ -1,17 +1,27 @@
 "use client";
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import styles from "./header.module.scss";
 import NavLink from "./NavLink";
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
+    const [isScrolled, setIsScrolled] = useState(false);
+
+    useEffect(() => {
+        const handleScroll = () => {
+            setIsScrolled(window.scrollY > 0);
+        };
+
+        window.addEventListener('scroll', handleScroll);
+        return () => window.removeEventListener('scroll', handleScroll);
+    }, []);
 
     const toggleMenu = () => {
         setIsMenuOpen(!isMenuOpen);
     };
 
     return (
-      <header className={styles.header}>
+      <header className={`${styles.header} ${isScrolled ? styles.sticky : ''}`}>
 
      
 
