@@ -1,50 +1,52 @@
 import Image from "next/image";
 import styles from "./HeroSection.module.scss";
+import { hero } from "@/data";
 
 export default function HeroSection() {
+  const { images } = hero;
   return (
     <section className={styles.hero}>
       <div className="container">
         <div className={styles.heroSidebar}>
-          <div className={styles.heroSidebarText}>Web Developer</div>
+          <div className={styles.heroSidebarText}>{hero.sidebar.role}</div>
           <div className={styles.heroSidebarLine}></div>
-          <div className={styles.heroSidebarText}>2026</div>
+          <div className={styles.heroSidebarText}>{hero.sidebar.year}</div>
         </div>
         <div className={styles.heroContent}>
           <div className={styles.heroStatistics}>
             <div className={styles.heroStatisticsItem}>
               <div className={styles.heroStatisticsItemValue}>
-                <span className={styles.plus}>+</span>300
+                <span className={styles.plus}>+</span>{hero.stats.projects.value}
               </div>
               <div className={styles.heroStatisticsItemLabel}>
-                Projects completed
+                {hero.stats.projects.label}
               </div>
             </div>
             <div className={styles.heroStatisticsItem}>
               <div className={styles.heroStatisticsItemValue}>
-                <span className={styles.plus}>+</span>50
+                <span className={styles.plus}>+</span>{hero.stats.startups.value}
               </div>
               <div className={styles.heroStatisticsItemLabel}>
-                Startup raise
+                {hero.stats.startups.label}
               </div>
             </div>
           </div>
           <h1 className={styles.heroTitle}>
-            <div className={`${styles.heroTitleSpan} text-4xl not-italic`}>Hello</div>
+            <div className={`${styles.heroTitleSpan} text-4xl not-italic`}>{hero.title.greeting}</div>
             <div className={styles.heroTitleSpan}>
-              I'm, Karina!<br />
-              Full-stack developer / UI/UX Designer
+              {hero.title.name}<br />
+              {hero.title.role}
             </div>
           </h1>
 
           <div className={`flex flex-wrap gap-4 ${styles.scrollDownWrapper}`}>
             <a href="#" className={`flex items-center gap-2 text-base font-normal transition-all hover:opacity-80 ${styles.scrollDown}`}>
-              <span>Scroll down</span>
+              <span>{hero.scrollDown}</span>
               <Image 
-                src="/images/arrow-down.svg" 
-                alt="arrow down" 
-                width={16} 
-                height={16}
+                src={images.arrowDown.src}
+                alt={images.arrowDown.alt}
+                width={images.arrowDown.width}
+                height={images.arrowDown.height}
                 className="w-4 h-4"
               />
             </a>
@@ -53,10 +55,10 @@ export default function HeroSection() {
 
         <Image 
           className={styles.heroImage} 
-          src="/images/hero-image.png" 
-          alt="hero image"
-          width={550}
-          height={800}
+          src={images.hero.src}
+          alt={images.hero.alt}
+          width={images.hero.width}
+          height={images.hero.height}
           priority
         />
       </div>

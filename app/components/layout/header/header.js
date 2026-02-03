@@ -3,6 +3,7 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./header.module.scss";
 import NavLink from "./NavLink";
+import { header as headerContent } from "@/data";
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -29,14 +30,19 @@ export default function Header() {
         <div className={`container ${styles.container}`}>
 
           <a href="/" className={styles.headerLogo}>
-            <Image src="/images/logo.svg" alt="logo" width={50} height={40} />
+            <Image 
+              src={headerContent.images.logo.src} 
+              alt={headerContent.images.logo.alt} 
+              width={headerContent.images.logo.width} 
+              height={headerContent.images.logo.height} 
+            />
           </a>
 
 
           <div 
             className={`${styles.headerMenuToggle} ${isMenuOpen ? styles.headerMenuToggleActive : ''}`}
             onClick={toggleMenu}
-            aria-label="Toggle menu"
+            aria-label={headerContent.menuToggleAria}
           >
            <span className={styles.headerMenuToggleLine}></span>
            <span className={styles.headerMenuToggleLine}></span>
@@ -46,21 +52,21 @@ export default function Header() {
           <div className={`${styles.headerMenu} ${isMenuOpen ? styles.headerMenuOpen : ''}`}>
 
           <div className={styles.headerMenuLinks}>
-          <NavLink href="/" className={styles.headerMenuLink}>Home</NavLink>
-          <NavLink href="/" className={styles.headerMenuLink}>About me</NavLink>
-          <NavLink href="/" className={styles.headerMenuLink}>Portfolio</NavLink>
-          <NavLink href="/" className={styles.headerMenuLink}>Services</NavLink>
+          <NavLink href="/" className={styles.headerMenuLink}>{headerContent.nav.home}</NavLink>
+          <NavLink href="/" className={styles.headerMenuLink}>{headerContent.nav.about}</NavLink>
+          <NavLink href="/" className={styles.headerMenuLink}>{headerContent.nav.portfolio}</NavLink>
+          <NavLink href="/" className={styles.headerMenuLink}>{headerContent.nav.services}</NavLink>
           </div>
 
           <div className={styles.headerMenuContact}>
             <a href="#" className={styles.headerMenuContactLink}>
-              <span className={styles.headerMenuContactLinkText}>Contact Me</span>
+              <span className={styles.headerMenuContactLinkText}>{headerContent.contact}</span>
               
               <Image 
-                src="/images/arrow-top.svg" 
-                alt="arrow top" 
-                width={9} 
-                height={9}
+                src={headerContent.images.arrowTop.src}
+                alt={headerContent.images.arrowTop.alt}
+                width={headerContent.images.arrowTop.width}
+                height={headerContent.images.arrowTop.height}
                 className={styles.headerMenuContactLinkIcon} 
               /></a>
           </div>

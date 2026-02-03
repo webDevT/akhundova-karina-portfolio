@@ -1,5 +1,6 @@
 import Image from "next/image";
 import styles from "./AboutSection.module.scss";
+import { about } from "@/data";
 
 export default function AboutSection() {
   return (
@@ -13,19 +14,19 @@ export default function AboutSection() {
 
           <div className="col-span-1">
           <h2 className="h2">
-          About
+          {about.title}
         </h2>
 
         <p>
-        Experienced web developer and designer with over +8 years of successful practice. Specializing in creating effective and creative websites from concept and design to full implementation on platforms such as React/Next.js, HTML, CSS, and JavaScript. Proficient in design tools such as Figma, Photoshop, and Adobe XD. Skilled in logo design. Experienced with various CMS, including WordPress. Successfully delivered a range of projects resulting in increased website traffic and enhanced user experience.
+        {about.intro}
         </p>
 
         <Image 
           className={styles.aboutArrow} 
-          src="/images/arrow.svg" 
-          alt="arrow"
-          width={150}
-          height={170}
+          src={about.images.arrow.src}
+          alt={about.images.arrow.alt}
+          width={about.images.arrow.width}
+          height={about.images.arrow.height}
           priority
         />
 
@@ -35,29 +36,29 @@ export default function AboutSection() {
             <div className={styles.aboutCard}>
               <div className={styles.aboutBageWrapper}>
                 <Image 
-                src="/images/bage.svg" 
-                alt="arrow"
-                width={33}
-                height={29}
+                src={about.images.badge.src}
+                alt={about.images.badge.alt}
+                width={about.images.badge.width}
+                height={about.images.badge.height}
                 priority
               />
               </div>
 
               <div className={styles.aboutBageValue}>
-                100%
+                {about.card.badgeValue}
               </div>
 
            
                 <p>
-                Job Success. Proudly ranked within the top 3% of freelancers worldwide on Upwork, earning the exclusive Top Rated Plus recognition.  
+                {about.card.text}
                 </p>
 
                 <Image 
                 className={styles.aboutPhoto1}
-                src="/images/photo2.png" 
-                alt="arrow"
-                width={267}
-                height={319}
+                src={about.images.photo1.src}
+                alt={about.images.photo1.alt}
+                width={about.images.photo1.width}
+                height={about.images.photo1.height}
                 priority
               />
 
@@ -73,17 +74,16 @@ export default function AboutSection() {
             <div className={styles.aboutTextWrapper}>
               <Image 
               className={styles.aboutPhoto2} 
-              src="/images/photo1.png" 
-              alt="arrow"
-              width={218}
-              height={193}
+              src={about.images.photo2.src}
+              alt={about.images.photo2.alt}
+              width={about.images.photo2.width}
+              height={about.images.photo2.height}
               priority
             />
             <div className={styles.aboutSectionText}>
             
               <p>
-              
-Proven track record of delivering high-quality work and consistently achieving excellent client satisfaction. Adept at managing multiple projects simultaneously, meeting tight deadlines, and exceeding client expectations. Committed to staying abreast of the latest trends and technologies in web development and design to ensure the delivery of cutting-edge solutions.
+                {about.outro}
               </p>
             </div>
             

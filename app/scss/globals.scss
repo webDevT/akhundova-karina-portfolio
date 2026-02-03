@@ -152,13 +152,27 @@ ol {
 }
 .h2 {
   font-size: 48px;
-  line-height: 1;
+  line-height: 1.2;
+  margin-bottom: 0;
 }
 p {
   color: #7B7B7B;
   line-height: 1.5;
 }
-
+.subtitle {
+  font-size: 20px;
+  position: relative;
+  display: flex;
+  align-items: center;
+  &::before {
+    content: '';
+    width: 11px;
+    height: 11px;
+    background-color: $main-text;
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+}
 @media (max-width: 768px) {
   .h2 {
     font-size: 32px;
@@ -166,4 +180,11 @@ p {
   p {
     font-size: 16px;
   }
+  .subtitle {
+    font-size: 18px;
+    &::before {   
+      width: 9px;
+      height: 9px;
+  } 
+}
 }
