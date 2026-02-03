@@ -1,0 +1,231 @@
+@use "../../../scss/variables" as *;
+
+//start hero style 
+.hero {
+  position: relative;
+  :global(.container) {
+    padding-top: 100px;
+    border-bottom: 2px solid #E2E2E2;
+    height: 780px;
+    max-height: 100vh;
+    position: relative;
+  }
+}
+.heroSidebar {
+  position: absolute;
+  left: 0;
+  top: 0;
+  bottom: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  padding: 100px 20px 39px 0px;
+  z-index: 10;
+  color: $light-grey-2;
+}
+.heroSidebarText {
+  writing-mode: vertical-rl;
+  text-orientation: mixed;
+  font-size: 16px;
+  font-weight: 400;
+  transform: rotate(180deg);
+  white-space: nowrap;
+}
+.heroSidebarLine {
+  width: 1px;
+  height: 70%;
+  background-color: $light-grey-2;
+  margin: 20px 0;
+}
+.heroImage {
+  position: absolute;
+  bottom: 0;
+  right: -20px;
+  max-height: 92vh;
+  object-fit: contain;
+}
+.heroStatistics {
+  display: flex;
+}
+.heroContent {
+  padding-top: 30px;
+  padding-bottom: 30px;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-left: 90px;
+}
+.heroTitleSpan {
+  font-size: 20px;
+  
+  &:global(.text-4xl) {
+    font-size: 240px; 
+    font-weight: 300;
+    line-height: 1;
+    font-style: normal;
+  }
+}
+.heroStatisticsItemValue {
+  font-size: 46px;
+  font-weight: 300;
+  display: flex;
+  line-height: 1;
+}
+.plus {
+  font-size: 30px;
+  margin-right: 8px;
+  margin-top: 3px;
+  display: block;
+}
+.heroStatisticsItemLabel {
+  font-size: 16px;
+  color: $light-grey;
+}
+.heroStatisticsItem {
+  margin-right: 28px;
+}
+.scrollDown {
+  img {
+    transition: all 0.5s;
+  }
+  
+  &:hover {
+    img {
+      transform: translateY(2px);
+    }
+  }
+}
+//end hero style
+
+@media (max-width: 1260px) {
+  .heroContent {
+    margin-left: 60px;
+  }
+  .heroTitleSpan:global(.text-4xl) {
+    font-size: 200px;
+  }
+  .heroImage {
+    width: 44vw;
+  }
+  .hero :global(.container) {
+    height: 62vw;
+  }
+}
+@media (max-width: 992px) {
+  .heroTitleSpan:global(.text-4xl) {
+    font-size: 20vw;
+  }
+  .heroSidebar {
+    display: none;
+  }
+  .heroContent {
+    margin-left: 0;
+  }
+  .hero :global(.container) {
+    height: 75vw;
+    max-height: fit-content;
+    height: fit-content;
+    min-height: 60vw;
+  }
+
+}
+@media (max-width: 665px) {
+  .hero {
+    overflow: hidden;
+  }
+  .hero :global(.container) {
+    height: auto;
+    width: 100vw;
+    max-width: 100vw;
+    height: 100vh;
+  }
+  .heroImage {
+    width: auto;
+    right: auto;
+    left: 50%;
+    bottom: 0;
+    transform: translateX(-50%);
+    max-height: 61vh;
+  }
+  .heroStatistics {
+    order: 2;
+    flex-direction: column;
+    margin-top: 60px;
+  }
+  .heroTitleSpan {
+    font-size: 5.2vw;
+    line-height: 1.8;
+    margin-top: 2vw;
+  }
+  .heroTitleSpan:global(.text-4xl) {
+    font-size: 12vw;
+  }
+  .scrollDownWrapper {
+    position: absolute;
+    left: 0%; 
+    bottom: -1px;
+    z-index: 9; 
+    width: 100%;
+    padding-top: 20vw;
+    padding-bottom: 3vw;
+    background: linear-gradient(181.21deg, rgba(#E2E2E2, 0) 20%, #E2E2E2 80%);
+    display: flex;
+    justify-content: center;
+  }
+ 
+  .heroTitle {
+    order: 1;
+  }
+  .heroContent {
+    padding-left: 6vw;
+    justify-content: flex-start;
+    position: relative;
+    padding-top: 0;
+    
+  }
+  .hero :global(.container) {
+    padding-top: 10vh;
+  }
+ 
+  .heroStatisticsItem {
+    opacity: 0.1;
+  }
+  .heroStatisticsItem:first-child {
+    position: absolute;
+    bottom: 49vh;
+    right: -4vw;
+    text-align: right;
+    .heroStatisticsItemValue {
+      justify-content: flex-end;
+    }
+    
+  }
+  .heroStatisticsItem:nth-child(2) {
+    position: absolute;
+    bottom: 35vh;
+    left: 0;
+    text-align: right;    
+  }
+  .heroStatisticsItemLabel {
+    font-size: 3.8vw;
+    color: #222;
+  }
+  .heroStatisticsItemValue {
+    font-size: 13vw;
+    line-height: 0.8;
+  }
+  
+  
+}
+@media (max-width: 520px) {
+.hero :global(.container) {
+  padding-top: 16vh;
+}
+.heroStatisticsItem:first-child {
+  .heroStatisticsItem:first-child {
+    right: -7.5vw;
+  }
+}
+}

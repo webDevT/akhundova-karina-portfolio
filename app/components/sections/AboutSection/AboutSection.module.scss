@@ -1,0 +1,120 @@
+@use "../../../scss/variables" as *;
+
+//start hero style 
+.aboutSection {
+  padding-top: 80px;
+  padding-bottom: 80px;
+  :global(p) {
+    width: 380px;
+    max-width: 100%;
+  }
+  :global(.h2) {
+    margin-bottom: 50px;
+  }
+}
+.aboutArrow {
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 54px;
+}
+.aboutCard {
+  background: #FFFFFF;
+  border-radius: 10px;
+  width: 315px;
+  max-width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+  padding: 24px;
+  :global(p) {
+    font-size: 16px;
+  }
+
+}
+.aboutBageWrapper {
+  width: 75px;
+  height: 75px;
+  border-radius: 50%;
+  background: linear-gradient(180deg, #FFFFFF 0%, #F8F8F8 100%);
+  box-shadow: 0px -1px 4px rgba(0, 0, 0, 0.25);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.aboutBageValue {
+  font-size: 67px;
+}
+.aboutPhoto1 {
+  width: 100%;
+  aspect-ratio: 267 / 319;
+  object-fit: cover;
+  border-radius: 15px;
+  margin-top: 40px;
+}
+
+.aboutPhoto2 {
+  width: 218px;
+  aspect-ratio: 218 / 193;
+  object-fit: cover;
+  border-radius: 10px;
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+.aboutTextWrapper {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding-bottom: 24px;
+}
+
+@media (max-width: 992px) {
+  .aboutArrow {
+    display: none;
+  }
+  .aboutTextWrapper {
+    padding-bottom: 0;
+  }
+  body {
+    font-size: 16px;
+  }
+}
+@media (max-width: 768px) {
+  .aboutSection {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    :global(.h2) {
+      margin-bottom: 15px;
+    }
+    p {
+      width: 100%;
+    }
+  }
+  .aboutTextWrapper {
+    flex-direction: column-reverse;
+  }
+  .aboutPhoto2 {
+    width: 50%;
+    margin-top: 20px;
+    border-radius: 10px;
+    margin-right: 0;
+  }
+  .aboutCard {
+    width: 100%;
+    padding: 20px 20px;
+  }
+  .aboutPhoto1 {
+    aspect-ratio: 1/1;
+    border-radius: 10px;
+    width: 50%;
+
+  }
+  .aboutBageValue {
+    font-size: 40px;
+  }
+  .aboutBageWrapper {
+    width: 60px;
+    height: 60px;
+  }
+}

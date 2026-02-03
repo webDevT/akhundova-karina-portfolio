@@ -1,5 +1,6 @@
 "use client";
 import { useState, useEffect } from "react";
+import Image from "next/image";
 import styles from "./header.module.scss";
 import NavLink from "./NavLink";
 
@@ -28,7 +29,7 @@ export default function Header() {
         <div className={`container ${styles.container}`}>
 
           <a href="/" className={styles.headerLogo}>
-            <img src="images/logo.svg" alt="logo" />
+            <Image src="/images/logo.svg" alt="logo" width={50} height={40} />
           </a>
 
 
@@ -55,7 +56,13 @@ export default function Header() {
             <a href="#" className={styles.headerMenuContactLink}>
               <span className={styles.headerMenuContactLinkText}>Contact Me</span>
               
-              <img src="images/arrow-top.svg" alt="arow top" className={styles.headerMenuContactLinkIcon} /></a>
+              <Image 
+                src="/images/arrow-top.svg" 
+                alt="arrow top" 
+                width={9} 
+                height={9}
+                className={styles.headerMenuContactLinkIcon} 
+              /></a>
           </div>
         </div> 
 
