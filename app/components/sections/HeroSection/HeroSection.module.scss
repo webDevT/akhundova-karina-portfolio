@@ -142,12 +142,12 @@
     height: 100vh;
   }
   .heroImage {
-    width: auto;
+    width: 100%;
     right: auto;
     left: 50%;
     bottom: 0;
     transform: translateX(-50%);
-    max-height: 61vh;
+    max-height: 66vh;
   }
   .heroStatistics {
     order: 2;
@@ -169,7 +169,7 @@
     z-index: 9; 
     width: 100%;
     padding-top: 20vw;
-    padding-bottom: 3vw;
+    padding-bottom: 4vh;
     background: linear-gradient(181.21deg, rgba(#E2E2E2, 0) 20%, #E2E2E2 80%);
     display: flex;
     justify-content: center;
