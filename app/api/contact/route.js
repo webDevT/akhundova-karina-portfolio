@@ -15,6 +15,14 @@ export async function POST(request) {
       );
     }
 
+    const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    if (!emailRegex.test(email.trim())) {
+      return NextResponse.json(
+        { error: "Please enter a valid email address" },
+        { status: 400 }
+      );
+    }
+
     const toEmail = process.env.CONTACT_EMAIL;
     if (!toEmail) {
       console.error("CONTACT_EMAIL is not set");
@@ -33,10 +41,10 @@ export async function POST(request) {
     }
 
     const { data, error } = await resend.emails.send({
-      from: "Portfolio <onboarding@resend.dev>",
+      from: "MY WEBSITE <onboarding@resend.dev>",
       to: [toEmail],
       replyTo: email.trim(),
-      subject: `Portfolio: message from ${name.trim()}`,
+      subject: `Contact form — message from ${name.trim()}`,
       text: message.trim(),
       html: `
         <p><strong>From:</strong> ${name.trim()} &lt;${email.trim()}&gt;</p>

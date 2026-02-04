@@ -70,6 +70,7 @@
   transition: all 0.5s;
 }
 
+
 @media (max-width: 768px) {
   .ctaSection {
     padding-top: 60px;
@@ -77,11 +78,11 @@
   }
 
   .ctaTitle {
-    margin-bottom: 16px;
+    margin-bottom: 10px;
   }
 
   .ctaDescription {
-    margin-bottom: 32px;
+    margin-bottom: 0px;
     font-size: $font-size-sm;
   }
 
@@ -89,4 +90,11 @@
     padding: 14px 32px;
     font-size: $font-size-sm;
   }
+  .ctaContent {
+    padding-top: 50px;
+    padding-bottom: 30px;
+    background: linear-gradient(180deg, rgba(34, 34, 34, 0) 0%, #222222 60%),
+      url('/images/cta.png') no-repeat center center;
+    background-size: cover;
+}
 }
