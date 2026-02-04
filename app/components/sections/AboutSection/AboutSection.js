@@ -4,7 +4,7 @@ import { about } from "@/data";
 
 export default function AboutSection() {
   return (
-    <section className={styles.aboutSection}>
+    <section className={styles.aboutSection} id="about">
       <div className="container">
 
         

@@ -8,6 +8,7 @@ export { navLinks } from "./nav";
 export { hero } from "./hero";
 export { about } from "./about";
 export { experience } from "./experience";
+export { services } from "./services";
 export { cta } from "./cta";
 export { contact } from "./contact";
 export { footer } from "./footer";

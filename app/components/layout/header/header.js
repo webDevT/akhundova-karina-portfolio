@@ -55,7 +55,12 @@ export default function Header() {
 
           <div className={styles.headerMenuLinks}>
           {headerContent.navLinks.map((item) => (
-            <NavLink key={item.href} href={item.href} className={styles.headerMenuLink}>
+            <NavLink
+              key={item.href}
+              href={item.href}
+              className={styles.headerMenuLink}
+              onClick={() => setIsMenuOpen(false)}
+            >
               {item.label}
             </NavLink>
           ))}
