@@ -1,15 +1,12 @@
 /**
- * Контент хедера: навігація, зображення.
- * Можна замінити на дані з CMS.
+ * Контент хедера: зображення, контакт.
+ * Навігація імпортується з nav.js.
  */
 
+import { navLinks } from "./nav";
+
 export const header = {
-  nav: {
-    home: "Home",
-    about: "About me",
-    portfolio: "Portfolio",
-    services: "Services",
-  },
+  navLinks,
   contact: "Contact Me",
   menuToggleAria: "Toggle menu",
   images: {

@@ -5,7 +5,7 @@ import { experience } from "@/data";
 export default function ExperienceSection() {
   return (
     <section className={styles.experienceSection}>
-      <div className="container">
+      <div className="container container-s">
         <div className={styles.experienceSectionHeader}>
           <div className={styles.experienceSectionHeaderTitles}>
             <h2 className="subtitle">{experience.subtitle}</h2>

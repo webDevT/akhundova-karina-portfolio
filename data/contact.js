@@ -5,7 +5,12 @@
 
 export const contact = {
   email: "karinadesyatnik27@gmail.com",
+  phone: "+380664140702",
   label: "Contact Me",
+  section: {
+    title: "Contact Me",
+    description: "Have an idea for a website or need help with your project? I'm here to help.",
+  },
   form: {
     photo: { src: "/images/photo4.png", alt: "Karina" },
     title: "Let's chat",

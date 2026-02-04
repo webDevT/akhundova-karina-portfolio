@@ -54,10 +54,11 @@ export default function Header() {
           <div className={`${styles.headerMenu} ${isMenuOpen ? styles.headerMenuOpen : ''}`}>
 
           <div className={styles.headerMenuLinks}>
-          <NavLink href="/" className={styles.headerMenuLink}>{headerContent.nav.home}</NavLink>
-          <NavLink href="/" className={styles.headerMenuLink}>{headerContent.nav.about}</NavLink>
-          <NavLink href="/" className={styles.headerMenuLink}>{headerContent.nav.portfolio}</NavLink>
-          <NavLink href="/" className={styles.headerMenuLink}>{headerContent.nav.services}</NavLink>
+          {headerContent.navLinks.map((item) => (
+            <NavLink key={item.href} href={item.href} className={styles.headerMenuLink}>
+              {item.label}
+            </NavLink>
+          ))}
           </div>
 
           <div className={styles.headerMenuContact}>
