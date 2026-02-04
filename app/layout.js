@@ -1,5 +1,6 @@
-import './scss/globals.scss';
-import localFont from 'next/font/local';
+import "./scss/globals.scss";
+import localFont from "next/font/local";
+import { ContactModalProvider } from "./components/ContactModal";
 
 // Підключення шрифту Aeonik
 const aeonik = localFont({
@@ -34,7 +35,9 @@ export default function RootLayout({ children }) {
           href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap"
         />
       </head>
-      <body>{children}</body>
+      <body>
+        <ContactModalProvider>{children}</ContactModalProvider>
+      </body>
     </html>
   );
 }

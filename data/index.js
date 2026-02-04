@@ -7,3 +7,5 @@ export { header } from "./header";
 export { hero } from "./hero";
 export { about } from "./about";
 export { experience } from "./experience";
+export { cta } from "./cta";
+export { contact } from "./contact";

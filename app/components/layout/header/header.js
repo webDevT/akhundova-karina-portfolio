@@ -3,11 +3,13 @@ import { useState, useEffect } from "react";
 import Image from "next/image";
 import styles from "./header.module.scss";
 import NavLink from "./NavLink";
-import { header as headerContent } from "@/data";
+import { header as headerContent, contact } from "@/data";
+import { useContactModal } from "@/app/components/ContactModal";
 
 export default function Header() {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
     const [isScrolled, setIsScrolled] = useState(false);
+    const { open: openContactModal } = useContactModal();
 
     useEffect(() => {
         const handleScroll = () => {
@@ -59,16 +61,23 @@ export default function Header() {
           </div>
 
           <div className={styles.headerMenuContact}>
-            <a href="#" className={styles.headerMenuContactLink}>
-              <span className={styles.headerMenuContactLinkText}>{headerContent.contact}</span>
-              
-              <Image 
+            <button
+              type="button"
+              onClick={() => {
+                openContactModal();
+                setIsMenuOpen(false);
+              }}
+              className={styles.headerMenuContactLink}
+            >
+              <span className={styles.headerMenuContactLinkText}>{contact.label}</span>
+              <Image
                 src={headerContent.images.arrowTop.src}
                 alt={headerContent.images.arrowTop.alt}
                 width={headerContent.images.arrowTop.width}
                 height={headerContent.images.arrowTop.height}
-                className={styles.headerMenuContactLinkIcon} 
-              /></a>
+                className={styles.headerMenuContactLinkIcon}
+              />
+            </button>
           </div>
         </div> 
 

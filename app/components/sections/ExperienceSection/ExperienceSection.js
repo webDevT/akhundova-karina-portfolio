@@ -31,31 +31,13 @@ export default function ExperienceSection() {
                   {item.logo && (
                     <div className={styles.logoBlock}>
                       {item.logo.image ? (
-                        item.logo.website ? (
-                          <a
-                            href={item.logo.website}
-                            target="_blank"
-                            rel="noopener noreferrer"
-                            className={styles.logoLink}
-                            aria-label={`Visit ${item.logo.companyName} website`}
-                          >
-                            <Image
-                              src={item.logo.image}
-                              alt={item.logo.companyName}
-                              width={48}
-                              height={48}
-                              className={styles.logoImage}
-                            />
-                          </a>
-                        ) : (
-                          <Image
-                            src={item.logo.image}
-                            alt={item.logo.companyName}
-                            width={48}
-                            height={48}
-                            className={styles.logoImage}
-                          />
-                        )
+                        <Image
+                          src={item.logo.image}
+                          alt={item.logo.companyName}
+                          width={48}
+                          height={48}
+                          className={styles.logoImage}
+                        />
                       ) : (
                         <div className={styles.logoPlaceholder} aria-hidden />
                       )}

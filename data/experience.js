@@ -34,7 +34,6 @@ export const experience = {
         companyName: "Upwork",
         tagline: "software development",
         image: "/images/upwork-logo.svg",
-        website: "https://www.upwork.com/freelancers/~01c870512070d6c589",
       },
     },
     {
@@ -54,7 +53,6 @@ export const experience = {
         companyName: "OneAccord",
         tagline: "AI translation",
         image: "/images/oneaccord-logo.svg",
-        website: "https://www.oneaccord.ai/",
       },
     },
     {
@@ -74,7 +72,6 @@ export const experience = {
         companyName: "Flirtu",
         tagline: "social platform",
         image: "/images/flirtu-logo.svg",
-        website: "https://www.linkedin.com/company/flirtu/",
       },
     },
     {
@@ -94,7 +91,6 @@ export const experience = {
         companyName: "UNIT SPACE",
         tagline: "software development",
         image: "/images/unit-space-logo.svg",
-        website: "https://unit-space.com/",
       },
     },
     {
@@ -113,7 +109,6 @@ export const experience = {
         companyName: "BionicaLTD",
         tagline: "IT consulting",
         image: "/images/bionica-logo.png",
-        website: "https://www.facebook.com/bionicakh/",
       },
     },
     {
@@ -127,7 +122,6 @@ export const experience = {
         companyName: "ISSAR",
         tagline: "research center",
         image: "/images/issar-logo.png",
-        website: "https://issar.com.ua/en/",
       },
     },
     
