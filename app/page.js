@@ -2,6 +2,7 @@ import Header from "./components/layout/header/header";
 import Footer from "./components/layout/footer";
 import HeroSection from "./components/sections/HeroSection";
 import AboutSection from "./components/sections/AboutSection";
+import PortfolioPreviewSection from "./components/sections/PortfolioPreviewSection";
 import ServicesSection from "./components/sections/ServicesSection";
 import ExperienceSection from "./components/sections/ExperienceSection";
 import CTASection from "./components/sections/CTASection";
@@ -13,6 +14,7 @@ export default function Home() {
       <Header />
       <HeroSection />
       <AboutSection />
+      <PortfolioPreviewSection />
       <ServicesSection />
       <ExperienceSection />
       <CTASection />

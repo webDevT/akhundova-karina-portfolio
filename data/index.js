@@ -12,3 +12,4 @@ export { services } from "./services";
 export { cta } from "./cta";
 export { contact } from "./contact";
 export { footer } from "./footer";
+export { portfolio } from "./portfolio";
