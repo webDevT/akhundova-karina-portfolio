@@ -47,7 +47,25 @@ export const portfolio = {
       tags: ["UI/UX Design", "Logo Design", "Front-end Development", "Landing page", "Social Posts", "Design to Code", "Brand Identity", "React/Next.js", "Design to Code", "Landing page"],
     },
     {
-      id: "3",
+      id: "2",
+      cardCategory: "Next.js application",
+      title: "Kelley Blue Book® Price Advisor",
+      description: "Branding and graphics. Logo, social assets, style guide.",
+      image: "/images/portfolio/p7.png",
+      url: "https://kbb-price-advisor.vercel.app/",
+      tags: ["Front-end Development", "Design to Code", "Landing page", "React/Next.js"],
+    },
+    {
+      id: "5",
+      cardCategory: "WordPress custom theme",
+      title: "Hyperion Defence",
+      description: "Branding and graphics. Logo, social assets, style guide.",
+      image: "/images/portfolio/p5.png",
+      url: "https://hyperion-defence.com/",
+      tags: ["Front-end Development", "WordPress", "UI/UX Design", "Design to Code"],
+    },
+    {
+      id: "4",
       cardCategory: "Design to Code",
       title: "StarBolt",
       description: "Branding and graphics. Logo, social assets, style guide.",
@@ -56,16 +74,7 @@ export const portfolio = {
       tags: ["Front-end Development", "Design to Code"],
     },
     {
-      id: "4",
-      cardCategory: "WordPress & UI/UX Design",
-      title: "Hyperion Defence",
-      description: "Branding and graphics. Logo, social assets, style guide.",
-      image: "/images/portfolio/p5.png",
-      url: "https://hyperion-defence.com/",
-      tags: ["Front-end Development", "WordPress", "UI/UX Design", "Design to Code"],
-    },
-    {
-      id: "2",
+      id: "3",
       cardCategory: "UI/UX Design & Front-end Development",
       title: "MejestyHouse",
       description: "Landing page and marketing site. Fast load, clear conversion path.",
@@ -73,6 +82,10 @@ export const portfolio = {
       url: "#",
       tags: ["Front-end Development", "Portfolio Sites", "UI/UX Design", "Mobile App", "Design to Code"],
     },
+   
+    
+   
+    
     
   ],
 };
