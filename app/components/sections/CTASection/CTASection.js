@@ -1,9 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import styles from "./CTASection.module.scss";
 import { cta } from "@/data";
 import { useContactModal } from "@/app/components/ContactModal";
+import Button from "@/app/components/ui/Button";
 
 export default function CTASection() {
   const { open } = useContactModal();
@@ -14,22 +14,15 @@ export default function CTASection() {
         <div className={styles.ctaContent}>
           <h2 className={`h2 ${styles.ctaTitle}`}>{cta.title}</h2>
           <p className={styles.ctaDescription}>{cta.description}</p>
-          <button
-            type="button"
+          <Button
+            variant="white"
+            showArrow
             onClick={open}
-            className={styles.ctaButton}
+            className={styles.ctaButtonWrap}
             aria-label={cta.buttonText}
           >
             {cta.buttonText}
-            <Image
-              src="/images/arrow-top.svg"
-              alt=""
-              width={20}
-              height={20}
-              className={styles.ctaButtonArrow}
-              aria-hidden
-            />
-          </button>
+          </Button>
         </div>
       </div>
     </section>

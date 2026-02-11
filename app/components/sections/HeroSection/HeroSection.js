@@ -24,10 +24,10 @@ export default function HeroSection() {
             </div>
             <div className={styles.heroStatisticsItem}>
               <div className={styles.heroStatisticsItemValue}>
-                <span className={styles.plus}>+</span>{hero.stats.startups.value}
+                <span className={styles.plus}>+</span>{hero.stats.clients.value}
               </div>
               <div className={styles.heroStatisticsItemLabel}>
-                {hero.stats.startups.label}
+                {hero.stats.clients.label}
               </div>
             </div>
           </div>
@@ -40,7 +40,7 @@ export default function HeroSection() {
           </h1>
 
           <div className={`flex flex-wrap gap-4 ${styles.scrollDownWrapper}`}>
-            <a href="#" className={`flex items-center gap-2 text-base font-normal transition-all hover:opacity-80 ${styles.scrollDown}`}>
+            <a href="#about" className={`flex items-center gap-2 text-base font-normal transition-all hover:opacity-80 ${styles.scrollDown}`} aria-label={hero.scrollDown}>
               <span>{hero.scrollDown}</span>
               <Image 
                 src={images.arrowDown.src}

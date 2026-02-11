@@ -34,40 +34,8 @@
   margin-right: auto;
 }
 
-.ctaButton {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  gap: 8px;
-  padding: 10px 40px;
-  font-size: $font-size-base;
-  font-weight: 500;
-  color: $main-text;
-  background: #fff;
-  border-radius: 8px;
-  transition: all 0.5s;
-  border-radius: 40px;
+.ctaButtonWrap {
   margin-top: 21px;
-
-  &:hover {
-    opacity: 0.95;
-    transform: translateY(-1px);
-    color: $main-text;
-    img {
-      transform: translateX(1px) translateY(-1px);
-    }
-  }
-
-  &:focus-visible {
-    outline: 2px solid $main-text;
-    outline-offset: 2px;
-  }
-}
-
-.ctaButtonArrow {
-  flex-shrink: 0;
-  width: 10px;
-  transition: all 0.5s;
 }
 
 
@@ -86,10 +54,6 @@
     font-size: $font-size-sm;
   }
 
-  .ctaButton {
-    padding: 14px 32px;
-    font-size: $font-size-sm;
-  }
   .ctaContent {
     padding-top: 50px;
     padding-bottom: 30px;

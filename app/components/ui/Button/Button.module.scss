@@ -1,0 +1,72 @@
+@use "../../../scss/variables" as *;
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 8px;
+  padding: 10px 40px;
+  font-size: $font-size-base;
+  font-weight: 500;
+  font-family: $font-family-aeonik;
+  border-radius: 40px;
+  transition: all 0.5s;
+  cursor: pointer;
+  border: none;
+  text-decoration: none;
+
+  &:hover {
+    opacity: 0.95;
+    transform: translateY(-1px);
+
+    .buttonArrow {
+      transform: translateX(1px) translateY(-1px);
+    }
+  }
+
+  &:focus-visible {
+    outline: 2px solid $main-text;
+    outline-offset: 2px;
+  }
+}
+
+.buttonWhite {
+  color: $main-text;
+  background: #fff;
+
+  &:hover {
+    color: $main-text;
+  }
+
+  &:focus-visible {
+    outline-color: #fff;
+  }
+}
+
+/* темна кнопка: білий текст і біла стрілка (специфічність вища за глобальні a { color: inherit }) */
+.buttonDark,
+.button.buttonDark {
+  color: #fff !important;
+  background: $main-text;
+
+  &:hover {
+    color: #fff !important;
+  }
+
+  .buttonArrow {
+    filter: brightness(0) invert(1);
+  }
+}
+
+.buttonArrow {
+  flex-shrink: 0;
+  width: 10px;
+  transition: all 0.5s;
+}
+
+@media (max-width: 768px) {
+  .button {
+    padding: 14px 32px;
+    font-size: $font-size-sm;
+  }
+}

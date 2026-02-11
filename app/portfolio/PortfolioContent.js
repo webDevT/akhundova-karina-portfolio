@@ -44,15 +44,13 @@ export default function PortfolioContent({ data }) {
             {filteredItems.map((item) => (
               <article key={item.id} className={styles.card}>
                 <Link
-                  href={item.url}
+                  href={`/portfolio/${item.id}`}
                   className={styles.cardLink}
-                  target={item.url.startsWith("http") ? "_blank" : undefined}
-                  rel={item.url.startsWith("http") ? "noopener noreferrer" : undefined}
                 >
                   <div className={styles.cardImageWrap}>
                     <Image
                       src={item.image}
-                      alt=""
+                      alt={item.title}
                       width={400}
                       height={300}
                       sizes="(max-width: 600px) 100vw, 50vw"
@@ -62,7 +60,6 @@ export default function PortfolioContent({ data }) {
                         {item.cardCategory && (
                           <p className={styles.cardCategory}>{item.cardCategory}</p>
                         )}
-                        <h2 className={styles.cardTitle}>{item.title}</h2>
                         <p className={styles.cardDescription}>
                           {item.description}
                         </p>
@@ -78,6 +75,7 @@ export default function PortfolioContent({ data }) {
                       </div>
                     </div>
                   </div>
+                  <h2 className={styles.cardTitle}>{item.title}</h2>
                 </Link>
               </article>
             ))}

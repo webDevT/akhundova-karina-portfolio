@@ -10,7 +10,7 @@ export const hero = {
   },
   stats: {
     projects: { value: "300", label: "Projects completed" },
-    startups: { value: "50", label: "Startup raise" },
+    clients: { value: "100", label: "Happy clients" },
   },
   title: {
     greeting: "Hello",

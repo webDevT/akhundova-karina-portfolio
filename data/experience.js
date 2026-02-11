@@ -66,7 +66,7 @@ export const experience = {
         "New features & improvements",
         "UX-driven interface optimization",
       ],
-      period: "March 2019 - Present",
+      period: "March 2022 - Present",
       logo: {
         companyName: "Flirtu",
         tagline: "social platform",
@@ -85,7 +85,7 @@ export const experience = {
         "Bug fixing & project expansion",
         "Animations & frontend polish",
       ],
-      period: "September 2016 - February 2019",
+      period: "September 2018 - February 2019",
       logo: {
         companyName: "UNIT SPACE",
         tagline: "software development",

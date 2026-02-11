@@ -1,6 +1,7 @@
 import "./scss/globals.scss";
 import localFont from "next/font/local";
 import { ContactModalProvider } from "./components/ContactModal";
+import ScrollToTop from "./components/ui/ScrollToTop";
 
 // Підключення шрифту Aeonik
 const aeonik = localFont({
@@ -37,6 +38,7 @@ export default function RootLayout({ children }) {
       </head>
       <body>
         <ContactModalProvider>{children}</ContactModalProvider>
+        <ScrollToTop />
       </body>
     </html>
   );
