@@ -23,8 +23,8 @@ const aeonik = localFont({
 });
 
 export const metadata = {
-  title: 'Akhundova Karina Portfolio',
-  description: 'Персональне портфоліо на Next.js',
+  title: 'Akhundova Karina — Web Developer & UI/UX Designer',
+  description: 'Full-stack developer and UI/UX designer. Websites, web apps, and branding from concept to launch. React, Next.js, Figma.',
 };
 
 export default function RootLayout({ children }) {

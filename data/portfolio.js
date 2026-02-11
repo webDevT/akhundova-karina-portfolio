@@ -101,6 +101,7 @@ export const portfolio = {
       description: "Branding and graphics. Logo, social assets, style guide.",
       image: "/images/portfolio/p5.png",
       heroImage: "/images/portfolio/hiperion-hero2.png",
+      featureImage: "/images/portfolio/hp2.png",
       url: "https://hyperion-defence.com/",
       tags: ["Front-end Development", "WordPress", "UI/UX Design", "Design to Code"],
       gallery: [
