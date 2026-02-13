@@ -154,6 +154,23 @@ export const portfolio = {
         { title: "Scaling & ongoing evolution", description: "I designed the interface structure for scale. The team continuously scales, improves, and develops the product — we now support 50+ languages and keep refining the experience.", image: "/images/portfolio/mh9.png" },
       ],
     },
+    {
+      id: "6",
+      cardCategory: "Design to Code",
+      title: "Website for Amadeo",
+      description: "Design-to-code conversion. Pixel-accurate implementation of provided designs into a responsive, production-ready website.",
+      image: "/images/portfolio/project6.png",
+      heroImage: "/images/portfolio/p98.png",
+      featureImage: "/images/portfolio/feature7.png",
+      url: "https://amadeo.tech/",
+      tags: ["Front-end Development", "Design to Code", "Landing page"],
+      gallery: [
+        "/images/portfolio/project6.png",
+      ],
+      services: ["Design to Code", "Front-end Development", "Responsive Layout", "Pixel-accurate Implementation"],
+      overview: "I converted the provided Figma designs into a live, responsive website for Amadeo. My role was front-end implementation: turning the visual concept into clean, maintainable code that matches the design specifications.\n\nThe work included building the layout structure, implementing responsive behaviour across breakpoints, and ensuring typography, spacing, and interactions align with the design. Attention was paid to performance, semantic HTML, and a codebase that the client can easily maintain and extend.",
+      result: "A production-ready website that accurately reflects the design and performs well across devices. The implementation is clean, responsive, and ready for ongoing updates.",
+    },
   ],
 };
 
